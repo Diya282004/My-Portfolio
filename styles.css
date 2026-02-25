@@ -1,0 +1,57 @@
+:root { --primary: #1e40af; --text: #1e293b; --border: #e2e8f0; --light: #f8fafc; }
+body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; margin: 0; scroll-behavior: smooth; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 5rem 0; border-bottom: 1px solid var(--border); }
+.bg-light { background: var(--light); }
+
+/* Navigation */
+.navbar { position: fixed; top: 0; width: 100%; background: white; z-index: 1000; border-bottom: 1px solid var(--border); padding: 15px 0; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.nav-links { display: flex; list-style: none; gap: 0.8rem; margin: 0; }
+.nav-links a { text-decoration: none; color: var(--text); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
+
+/* Resume Header Flex & Button */
+.section-header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+.download-btn { background: var(--primary); color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-size: 0.9rem; font-weight: 600; transition: 0.3s ease; }
+.download-btn:hover { background: #1e3a8a; }
+
+/* Hero */
+.hero-grid { display: grid; grid-template-columns: 260px 1fr; gap: 4rem; align-items: center; padding: 10rem 0 5rem; }
+.profile-img { width: 100%; border-radius: 12px; box-shadow: 10px 10px 0 var(--primary); }
+.section-label { color: var(--primary); font-size: 1.2rem; border-left: 4px solid var(--primary); padding-left: 15px; font-weight: 700; margin-bottom: 0; }
+
+/* Testimonial Intro */
+.testimonial-intro { margin-bottom: 2rem; border-left: 4px solid var(--primary); padding-left: 20px; font-style: italic; color: #475569; max-width: 850px; }
+
+/* Image Sizing (Compact Previews) */
+.thumb-gallery { display: flex; gap: 10px; margin-top: 10px; }
+.thumb { width: 60px; height: 45px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); }
+.thumb-full { width: 100%; max-width: 140px; height: auto; border-radius: 4px; border: 1px solid var(--border); margin-top: 10px; }
+.thumb-single { width: 120px; margin-top: 10px; border: 1px solid var(--border); border-radius: 4px; }
+.zoomable { cursor: zoom-in; transition: transform 0.2s; }
+.zoomable:hover { transform: scale(1.05); }
+
+/* Mastery & SWOT */
+.mastery-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.software-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.software-item { display: flex; align-items: center; gap: 10px; border: 1px solid var(--border); padding: 10px; border-radius: 8px; background: white; }
+.software-logo { width: 25px; height: 25px; object-fit: contain; }
+.swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+.swot-box { padding: 12px; border-radius: 6px; color: white; font-size: 0.85rem; }
+.s { background: #059669; } .w { background: #dc2626; } .o { background: #2563eb; } .t { background: #d97706; }
+
+/* Other Grid/Card Layouts */
+.timeline { border-left: 3px solid var(--primary); padding-left: 2rem; }
+.card { background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border); }
+.lor-grid, .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; }
+.item-with-logo { display: flex; gap: 20px; align-items: center; }
+.inline-logo { width: 40px; }
+.cgpa-tag { background: #eff6ff; color: var(--primary); padding: 4px 12px; border-radius: 20px; font-weight: 700; display: inline-block; font-size: 0.8rem; }
+
+/* Lightbox */
+.lightbox { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+.lightbox-content { max-width: 80%; max-height: 85vh; border: 4px solid white; }
+.close-btn { position: absolute; top: 20px; right: 40px; color: white; font-size: 40px; cursor: pointer; }
+
+.footer { text-align: center; padding: 4rem; font-size: 0.8rem; color: #94a3b8; }
+@media (max-width: 768px) { .hero-grid, .mastery-container { grid-template-columns: 1fr; } .section-header-flex { flex-direction: column; align-items: flex-start; } }
